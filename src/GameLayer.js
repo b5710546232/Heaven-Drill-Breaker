@@ -553,7 +553,8 @@ var GameLayer = cc.LayerColor.extend({
             if (this.score > ScoreRecord) {
                 ScoreRecord = this.score;
             }
-            cc.audioEngine.stopMusic(res.sound_bg_mp3);
+            // cc.audioEngine.stopMusic(res.sound_bg_mp3);
+            // cc.director.runScene(new cc.TransitionFade(0.5,new StartScene()));
             cc.director.runScene(new cc.TransitionFade(0.5,new GameOverScene()));
         }
     },
